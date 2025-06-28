@@ -4,7 +4,16 @@ import { Layout } from '../../components/Layout'
 import { NotionAPI } from 'notion-client'
 import siteConfig from '../../site.config'
 
-export default function CategoryPage({ posts, category, categories }) {
+interface CategoryPageProps {
+  posts: any[];
+  category: {
+    slug: string;
+    name: string;
+  };
+  categories: any[];
+}
+
+export default function CategoryPage({ posts, category, categories }: CategoryPageProps) {
   return (
     <Layout categories={categories} currentCategory={category.slug}>
       <div className="p-8">
