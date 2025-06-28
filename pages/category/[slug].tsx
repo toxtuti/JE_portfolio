@@ -1,5 +1,5 @@
 // pages/category/[slug].tsx
-import { GetStaticProps, GetStaticPaths } from 'next'
+import type { GetStaticProps, GetStaticPaths } from 'next'
 import { Layout } from '../../components/Layout'
 import { NotionAPI } from 'notion-client'
 import { siteConfig } from '../../site.config'
